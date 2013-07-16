@@ -8,7 +8,7 @@ var readerf = fs.readFileSync('index.html');
 var data = buf.toString('utf8', readerf);
 var fs = require('fs');
 var bfr = new buffer(data);
-  response.send('utf-8', bfr);
+  response.send(bfr);
 });
 
 var port = process.env.PORT || 5000;
