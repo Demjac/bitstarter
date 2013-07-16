@@ -4,10 +4,10 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
+var fs = require('fs');
 var readerf = fs.readFileSync('index.html');
 var data = buf.toString('utf8', readerf);
-var fs = require('fs');
-var bfr = new buffer(data);
+var bfr = new Buffer(data);
   response.send(bfr);
 });
 
